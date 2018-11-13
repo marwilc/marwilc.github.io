@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+  <meta charset="utf-8">
+  <title>Calculadora</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="../calculadora/js/jquery3.3.1.min.js" ></script>
+    <script defer src="../calculadora/js/main.js" ></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-select">
+            <select>
+                <option value="gris">GRIS</option>
+                <option value="azul">AZUL</option>
+                <option value="rojo">ROJO</option>
+            </select>
+        </div>
+        <!-- teclado de la calculadora-->
+        <div class="grid-container">
+                <div class="display">
+                    <input  value="" id="display" type="text" name="display">
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('7')">7</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('8')">8</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('9')">9</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('/')">/</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('4')">4</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('5')">5</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('6')">6</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('X')">X</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('1')">1</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('2')">2</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('3')">3</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('-')">-</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('0')" >0</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('C')">C</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('=')">=</button>
+                </div>
+                <div class="grid-item">
+                    <button onclick="teclear('+')">+</button>
+                </div>
+        </div>
+    </div>
+  <!--<script type="text/javascript" src="adapter.js"></script>-->
+</body>
+</html>
