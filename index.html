@@ -20,8 +20,13 @@
         </div>
         <!-- teclado de la calculadora-->
         <div id="skin" class="grid-container gris">
+            <div class="display-graph">
+                <canvas id="display-graph" >
+
+                </canvas>
+            </div>
                 <div class="display">
-                    <input  value="" id="display" type="text" name="display">
+                    <input  disabled value="" id="display" type="text" name="display">
                 </div>
                 <!-- funciones cientificas-->
                 <div class="grid-item">
@@ -61,7 +66,7 @@
                 </div>
 
                 <div class="grid-item">
-                    <button onclick="teclear('SQRTN')">&radic; n</button>
+                    <button onclick="teclear('SQRTN')">n &radic; </button>
                 </div>
 
             <div class="grid-item">
