@@ -1,5 +1,8 @@
+/**
+ *  function que captura las teclas
+ */
 function teclear(tecla){
-    let  input = $('#display').val();
+    let  input = document.getElementById('display').value;
     switch (tecla){
         case  '0':
         case  '1':
@@ -15,19 +18,25 @@ function teclear(tecla){
         case  '*':
         case  '-':
         case  '+':
-            $('#display').val(input + tecla);
+            // obtiene el input pantalla y le asigna la tecla
+            document.getElementById('display').value = input + tecla;
             break;
         case  '=':
             let result = operar(input);
-            $('#display').val(result);
+            document.getElementById('display').value = result;
             // efectuar operation
             break;
         case  'C':
-            $('#display').val('');
+            document.getElementById('display').value = '';
             break;
     }
 }
 
+/**
+ * opera el string
+ * @param input
+ * @returns {any}
+ */
 function operar(input){
     let result = 0;
     try {
@@ -38,23 +47,16 @@ function operar(input){
     return result;
 }
 
-$(document).ready(function ( ) {
-    /* Esta funcion cambia del color del
-    * */
-    $('#selector').change(function(){
-        let select = $(this).children('option:selected').val();
-        console.log(select);
-        $('.grid-container').removeClass('azul');
-        $('.grid-container').removeClass('gris');
-        $('.grid-container').removeClass('rojo');
-        $('.grid-container').addClass(select);
-    });
+/**
+ * function que cambia el skin de la calculadora
+ */
+function cambiarSkin() {
+    // obtiene el selector
+    let selector = document.getElementById('selector');
+    let selected = selector.options[selector.selectedIndex].value; // se obtiene el valor seleccionado
+    console.log(selected);
+    // obtiene el div de contenido de la calculadora
+    let object = document.getElementById('skin');
+    object.className  = 'grid-container ' + selected; // cambia la clase de la calculadora
 
-
-/*
-    $('#tecla_0').click(function () {
-        var  cadena = $('#display').value;
-        $('#display').val(cadena + '0');
-    });
-    */
-});
+}

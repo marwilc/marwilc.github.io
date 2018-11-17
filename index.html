@@ -1,26 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="../calculadora/styles.css">
   <meta charset="utf-8">
   <title>Calculadora</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="jquery3.3.1.min.js" ></script>
-    <script defer src="main.js" ></script>
+    <script defer src="../calculadora/main.js" ></script>
 </head>
 <body>
 
     <div class="container">
         <div class="container-select">
-            <select id="selector">
+            <select id="selector" class="select" onchange="cambiarSkin()">
                 <option value="gris">GRIS</option>
                 <option value="azul">AZUL</option>
                 <option value="rojo">ROJO</option>
             </select>
         </div>
         <!-- teclado de la calculadora-->
-        <div class="grid-container gris">
+        <div id="skin" class="grid-container gris">
                 <div class="display">
                     <input  value="" id="display" type="text" name="display">
                 </div>
@@ -74,6 +73,5 @@
                 </div>
         </div>
     </div>
-  <!--<script type="text/javascript" src="adapter.js"></script>-->
 </body>
 </html>

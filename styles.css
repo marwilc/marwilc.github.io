@@ -34,6 +34,7 @@ body {
 }
 
 .grid-container {
+    background-color: #2886bb;
     border-radius: 5px;
     border: 2px solid black;
     padding: 10px;
@@ -81,6 +82,15 @@ body {
 
 .rojo .grid-item{
     background-color: #7a3b3d;
+}
+
+.select{
+    width: 100%;
+    background-color: #2886bb;
+    color: white;
+    font-size: medium;
+    border-radius: 5px;
+    border: solid black;
 }
 
 
