@@ -1,8 +1,10 @@
 /**
  *  function que captura las teclas
  */
+const pi = { value:  Math.PI, name: 'pi'};
 function teclear(tecla){
     let  input = document.getElementById('display').value;
+
     switch (tecla){
         case  '0':
         case  '1':
@@ -28,6 +30,10 @@ function teclear(tecla){
             break;
         case  'C':
             document.getElementById('display').value = '';
+            break;
+        case  'PI':
+            document.getElementById('display').value += pi.value;
+            console.log(pi);
             break;
     }
 }
