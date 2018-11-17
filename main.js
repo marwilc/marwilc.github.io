@@ -20,6 +20,8 @@ function teclear(tecla){
         case  '*':
         case  '-':
         case  '+':
+        case  '(':
+        case  ')':
             // obtiene el input pantalla y le asigna la tecla
             document.getElementById('display').value = input + tecla;
             break;
@@ -35,6 +37,10 @@ function teclear(tecla){
             document.getElementById('display').value += pi.value;
             console.log(pi);
             break;
+        case  'E':
+            document.getElementById('display').value += 'e ';
+            console.log('e');
+            break;
     }
 }
 
@@ -45,10 +51,12 @@ function teclear(tecla){
  */
 function operar(input){
     let result = 0;
-    try {
-        result = eval(input);
-    }catch (e) {
-        result = 'Expression invalida';
+    if(input.length !== 0){
+        try {
+            result = eval(input);
+        }catch (e) {
+            result = 'Expression invalida';
+        }
     }
     return result;
 }
