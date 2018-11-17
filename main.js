@@ -114,6 +114,12 @@ function teclear(tecla){
             expresion += 'Math.sqrt ' ;
             console.log('ln');
             break;
+
+        case  'SQRTN':
+            document.getElementById('display').value += String.fromCharCode(8730);
+            expresion += 'Math.pow ' ;
+            console.log('ln');
+            break;
     }
 }
 
