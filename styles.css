@@ -52,7 +52,7 @@ body {
 
 .grid-item2 {
     background-color: #52b448;
-    grid-column: 1 / span 5;
+    grid-column: 2 / span 4;
     height: 60px;
     border-radius: 5px;
     border: 1px solid white;
