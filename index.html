@@ -21,7 +21,7 @@
         <!-- teclado de la calculadora-->
         <div id="skin" class="grid-container gris">
             <div class="display-graph">
-                <canvas id="display-graph" >
+                <canvas id="display-graph" width="574" height="200">
 
                 </canvas>
             </div>
@@ -153,7 +153,23 @@
                 <button onclick="teclear(',')">,</button>
             </div>
 
-                <div class="grid-item2">
+            <div class="grid-item">
+                <button onclick="teclear('y')">Y</button>
+            </div>
+            <div class="grid-item">
+                <button onclick="teclear('x')">X</button>
+            </div>
+            <div class="grid-item3">
+                <label class="switch">
+                    <input id="slider" type="checkbox" onclick="onGraph()">
+                    <span class="slider round"></span>
+                </label>
+                on/off graph
+            </div>
+
+
+
+            <div class="grid-item2">
                     <button onclick="teclear('=')">=</button>
                 </div>
 
