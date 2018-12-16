@@ -1,7 +1,7 @@
 let data;
 let mayor = 0;
 $(document).ready(
-    data = $.getJSON("arrays/letters.json", function( data ) {
+    data = $.getJSON("letters.json", function( data ) {
         console.log(data);
     })
 );
