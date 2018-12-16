@@ -1,179 +1,24 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
   <meta charset="utf-8">
-  <title>Calculadora</title>
+  <title>Arrays</title>
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="main.js" ></script>
+
+    <script defer src="main.js"></script>
+
 </head>
+
 <body>
+    <input  id="input" type="text" name="Text">
+    <button onclick="alternates()">Alternates</button>
+    <button onclick="limpiar()">clear</button>
+    <div id="output">
 
-    <div class="container">
-        <div class="container-select">
-            <select id="selector" class="select" onchange="cambiarSkin()">
-                <option value="gris">GRIS</option>
-                <option value="azul">AZUL</option>
-                <option value="rojo">ROJO</option>
-            </select>
-        </div>
-        <!-- teclado de la calculadora-->
-        <div id="skin" class="grid-container gris">
-            <div class="display-graph">
-                <canvas id="display-graph" width="574" height="200">
-
-                </canvas>
-            </div>
-                <div class="display">
-                    <input  disabled value="" id="display" type="text" name="display">
-                </div>
-                <!-- funciones cientificas-->
-                <div class="grid-item">
-                    <button onclick="teclear('POW')">pow</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('ABS')">abs</button>
-                </div>
-
-                 <div class="grid-item">
-                    <button onclick="teclear('SEN')">sen</button>
-                 </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('COS')">cos</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('TAN')">tan</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('LOG10')">log10</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('LOG2')">log2</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('LN')">ln</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('SQRT')">&radic;</button>
-                </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('SQRTN')">n &radic; </button>
-                </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('7')">7</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('8')">8</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('9')">9</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('(')">(</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear(')')">)</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('4')">4</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('5')">5</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('6')">6</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('*')">*</button>
-            </div>
-
-
-            <div class="grid-item">
-                <button onclick="teclear('/')">/</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('1')">1</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('2')">2</button>
-            </div>
-
-
-            <div class="grid-item">
-                <button onclick="teclear('3')">3</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('+')">+</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('-')">-</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('0')" >0</button>
-            </div>
-
-
-
-            <div class="grid-item">
-                <button onclick="teclear('PI')">&Pi;</button>
-            </div>
-
-                <div class="grid-item">
-                    <button onclick="teclear('E')">e</button>
-                </div>
-
-
-             <!-- funciones listas-->
-
-            <div class="grid-item">
-                <button onclick="teclear('C')">C</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('del')">del</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear(',')">,</button>
-            </div>
-
-            <div class="grid-item">
-                <button onclick="teclear('y')">Y</button>
-            </div>
-            <div class="grid-item">
-                <button onclick="teclear('x')">X</button>
-            </div>
-            <div class="grid-item3">
-                <label class="switch">
-                    <input id="slider" type="checkbox" onclick="onGraph()">
-                    <span class="slider round"></span>
-                </label>
-                on/off graph
-            </div>
-
-
-
-            <div class="grid-item2">
-                    <button onclick="teclear('=')">=</button>
-                </div>
-
-        </div>
     </div>
 </body>
+
 </html>
