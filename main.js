@@ -1,3 +1,12 @@
+var data;
+var mayor = 0;
+$(document).ready(
+    data = $.getJSON("letters.json", function( data ) {
+        console.log(data);
+    })
+);
+
+
 
 function limpiar() {
 
@@ -9,22 +18,39 @@ function limpiar() {
 }
 
 function alternates() {
-    console.log('clear');
-    let input =  document.getElementById('input').value;
-    let Indices = new Array(input.length);
 
-    for (let i = 0; i < Indices.length; i++ ){
-        Indices[i] = new Array(4);
-        Indices[i][0] = input[i];
-        document.getElementById('output').innerHTML += Indices[i][0] + ' = ';
+    let Json = buildOutput();
 
-        for (let j = 1; j <= 3; j++){
-            Indices[i][j] =  ` [${Indices[i][0]} - alt ${j}] `;
-            document.getElementById('output').innerHTML +=  Indices[i][j];
+    for (let i = 0; i < mayor; i++ ) {
+        for (let j = 0; j < Json.arrays.length; j++) {
+            let item = Json.arrays[j][i];
+            if(item !== undefined){
+                document.getElementById('output').innerHTML +=  `${item} `;
+            }else{
+                document.getElementById('output').innerHTML +=  '   ---   ';
+            }
+
         }
 
         document.getElementById('output').innerHTML += '<br>';
     }
+}
 
-    Indices = null;
+function buildOutput() {
+
+    let letters = data.responseJSON;
+    let input =  document.getElementById('input').value;
+    let Indices = {
+        'arrays' : []
+    };
+    Indices.arrays = new Array(input.length);
+    for (let i = 0; i < input.length; i++ ){
+        let alt = letters.find( x => x.name === input[i].toLowerCase()).alternates;
+        if(alt.length > mayor){
+            mayor = alt.length;
+        }
+        Indices.arrays[i] = alt;
+    }
+    console.log(Indices);
+    return Indices;
 }
