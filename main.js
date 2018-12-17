@@ -273,6 +273,51 @@ function arrayToString(arr) {
     return str.replace(/\,/g, " ");
 }
 
+//----------------------------------------
+function unicodesAlt() {
+
+    let input = document.getElementById('input3').value;
+    let arraySubstring = input.split(" ");
+
+    let letters = data2.responseJSON;
+
+    let Json = {
+        'arrays': []
+    };
+    Json.arrays = new Array(arraySubstring.length);
+    for (let i = 0; i < arraySubstring.length; i++) {
+
+        console.log(input[i]);
+        
+        let object = letters.find(x => x.name === arraySubstring[i]);
+        console.log(object);
+        let alt = object.alternates;
+        if (alt.length > mayor) {
+            mayor = alt.length;
+        }
+        Json.arrays[i] = alt;
+    }
+
+    // imprimimos los resultados
+    for (let i = 0; i < mayor; i++) {
+        for (let j = 0; j < Json.arrays.length; j++) {
+            // let rand1 = getRandomInt(mayor, 0);
+            // let rand2 = getRandomInt(mayor, 0);
+            let item = Json.arrays[j][i];
+            if (item !== undefined) {
+                document.getElementById('output3').innerHTML += `${item} `;
+            } else {
+                document.getElementById('output3').innerHTML += `${Json.arrays[j][0]} `;
+            }
+
+        }
+
+        // imprimimos un salto de linea para cada iteracion 
+        document.getElementById('output3').innerHTML += '<br>';
+    }
+
+}
+
 
 //var jsonArray = getArrResult(["unicode", "unicodeTow", "unicodeThree"], [10, 20], [100, 200, 300]);
 //var value = arrayToString(jsonArray);
