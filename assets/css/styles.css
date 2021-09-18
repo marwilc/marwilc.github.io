@@ -1,0 +1,77 @@
+.top-header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    margin-top: 16px;
+}
+
+.top-header-content{
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-background{
+    background: url('/assets/img/mac.jpg');    
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-position: center top !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-a-header{
+    text-decoration: none;
+    color: white;
+}
+
+.text-a-header:hover{
+    color: var(--bs-primary);
+}
+
+.bg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.text-12{
+    font-size: 12px;
+}
+
+.name-badge{
+    background: var(--bs-primary);
+    padding: 0px 5px 0px 5px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+}
+
+.nav-options-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.avatar{
+    width: 123px;
+    height: 123px;
+    display: flex;
+}
+
+.img-avatar{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
