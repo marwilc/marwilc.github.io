@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -157,12 +157,26 @@
                         <div class="text-center text-uppercase fw-bolder text-12">
 
                             <a href="#lang"
-                               class="d-none text-a-header transition-elevate"
-                               lang="en">En</a>
+                               class="d-flex justify-content-center align-items-center text-a-header transition-elevate"
+                               onclick="setLang('en')"
+                               lang="en">En
+                                <img src="/assets/img/english.svg"
+                                     class="ms-1 icon"
+                                     lang="en">
+                            </a>
+
+
 
                             <a href="#lang"
-                               class="d-none text-a-header transition-elevate"
-                               lang="es">Es</a>
+                               onclick="setLang('es')"
+                               class="d-none justify-content-center align-items-center text-a-header transition-elevate"
+                               lang="es">Es
+                                <img src="/assets/img/spanish.svg"
+                                     class="ms-1 icon d-none"
+                                     lang="es">
+                            </a>
+
+
                         </div>
 
 
@@ -173,8 +187,100 @@
 
                 <div class="row d-flex d-sm-none">
                     <div class="col">
-                        <i class="fas fa-bars"></i>
+                        <!-- <i class="fas fa-bars"></i> -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle text-light"
+                                    type="button"
+                                    id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                <i class="fas fa-bars text-light"></i>
+
+                            </button>
+                            <ul class="dropdown-menu bg-dark"
+                                aria-labelledby="dropdownMenuButton1">
+                                <li>
+
+                                    <a href="#about"
+                                       class="dropdown-item d-block text-a-header transition-elevate"
+                                       lang="en">About Me</a>
+
+                                    <a href="#about"
+                                       class="dropdown-item d-none text-a-header transition-elevate"
+                                       lang="es">Acerca de mi</a>
+
+                                </li>
+                                <li>
+
+                                    <a href="#skills"
+                                       class="dropdown-item d-block text-a-header transition-elevate"
+                                       lang="en">Skills</a>
+
+                                    <a href="#skills"
+                                       class="dropdown-item d-none text-a-header transition-elevate"
+                                       lang="es">Habilidades</a>
+
+                                </li>
+                                <li>
+
+                                    <a href="#experience"
+                                       class="dropdown-item d-block text-a-header transition-elevate"
+                                       lang="en">Experience</a>
+
+                                    <a href="#experience"
+                                       class="dropdown-item d-none text-a-header transition-elevate"
+                                       lang="es">Experiencia</a>
+
+                                </li>
+
+                                <li>
+                                    <a href="#education"
+                                       class="dropdown-item d-block text-a-header transition-elevate"
+                                       lang="en">Education</a>
+
+                                    <a href="#education"
+                                       class="dropdown-item d-none text-a-header transition-elevate"
+                                       lang="es">Educacion</a>
+                                </li>
+
+                                <li class="d-none">
+                                    <a href="#portfolio"
+                                       class="dropdown-item d-block text-a-header transition-elevate"
+                                       lang="en">Portfolio</a>
+
+                                    <a href="#portfolio"
+                                       class="dropdown-item d-none text-a-header transition-elevate"
+                                       lang="es">Portafolio</a>
+                                </li>
+
+                                <li>
+
+                                    <a href="#lang"
+                                       class="dropdown-item d-flex  text-a-header transition-elevate"
+                                       onclick="setLang('en')"
+                                       lang="en">En
+                                        <img src="/assets/img/english.svg"
+                                             class="ms-1 icon"
+                                             lang="en">
+                                    </a>
+
+
+
+                                    <a href="#lang"
+                                       onclick="setLang('es')"
+                                       class="dropdown-item d-none  text-a-header transition-elevate"
+                                       lang="es">Es
+                                        <img src="/assets/img/spanish.svg"
+                                             class="ms-1 icon d-none"
+                                             lang="es">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
+
+
 
                     <div class="col text-end text-uppercase">
                         <span class="name-badge">MarwilC</span>
@@ -296,30 +402,25 @@
 
             </p>
 
-        </div>
 
-        <h1 class="text-dark d-none"
-            lang="es">Acerca de mi</h1>
-        <p lang="es"
-           class="d-none">
+            <h1 class="text-dark d-none"
+                lang="es">Acerca de mi</h1>
+            <p lang="es"
+               class="d-none">
 
-            I'm a B.S. in Computer Science, I am specialized in programming web pages and applications, I have also contributed to the development of hybrid mobile applications with Ionic Framework.
-            <br>
-            <br>
+                Soy Licenciado en Ciencias de la Computación, estoy especializado en la programación de páginas web y aplicaciones, también he contribuido al desarrollo de aplicaciones móviles híbridas con Ionic Framework.
+                <br>
+                <br>
+                Me caracterizo por ser un profesional autodidacta y de rápida adaptación a nuevos entornos.
+                <br>
+                <br>
+                Con el tiempo he logrado la capacidad de crear proyectos de software desde cero hasta producción, MEAN & LAMP Stack, lo que me ha llevado a consolidar un alto grado de liderazgo y empatía.
 
-            I characterize myself by being a self-taught professional and quick adaptation to new environments.
-            <br>
-            <br>
-            Over time I have achieved the ability to create software projects from scratch to production, MEAN
-            & LAMP Stack, which has led me to consolidate a high degree of leadership and empathy.
+                <br>
+                <br>
+                Proactivo con iniciativa e innovación. Estoy acostumbrado al trabajo en equipo, con un alto sentido de responsabilidad y eficacia. Siempre estoy dispuesto a afrontar nuevos retos profesionales.
 
-            <br>
-            <br>
-            Proactive with initiative and innovation. I am used to teamwork, with a high sense of responsibility
-            and effectiveness. I am always ready to face new professional challenges.
-
-        </p>
-
+            </p>
         </div>
 
     </section>
@@ -472,7 +573,12 @@
 
 
 
-                    <h6 class="text-center text-uppercase mt-4">Tools</h6>
+                    <h6 class="text-center text-uppercase mt-4 justify-content-center"
+                        lang="en">Tools</h6>
+
+                    <h6 class="text-center text-uppercase mt-4 justify-content-center d-none"
+                        lang="es">Herramientas</h6>
+
 
                     <div class="d-flex justify-content-between mt-1 mb-1">
                         <span class="text-start text-uppercase">GIT</span>
@@ -617,7 +723,12 @@
                     </div>
 
 
-                    <h6 class="text-center text-uppercase mt-4">Others Programming Languages</h6>
+                    <h6 class="text-center text-uppercase justify-content-center mt-4 d-block"
+                        lang="en">Others Programming Languages</h6>
+
+                    <h6 class="text-center text-uppercase mt-4 d-none justify-content-center"
+                        lang="es">Otros Lenguajes de programación</h6>
+
 
 
 
@@ -664,7 +775,12 @@
                         </div>
                     </div>
 
-                    <h6 class="text-center text-uppercase mt-4">Languages</h6>
+                    <h6 class="text-center text-uppercase mt-4 justify-content-center"
+                        lang="en">Languages</h6>
+
+
+                    <h6 class="text-center text-uppercase mt-4 d-none justify-content-center"
+                        lang="es">Idiomas</h6>
 
 
                     <div class="d-flex justify-content-between mt-1 mb-1">
@@ -712,12 +828,17 @@
             <h1 class="text-dark d-block"
                 lang="en">Work Experience</h1>
 
+            <h1 class="text-dark d-none"
+                lang="es">Experiencia de Trabajo</h1>
+
 
 
             <p class="w-100">
                 <span class="fs-3">
                     Lead Front End Architect
                 </span>
+
+
 
                 <br>
 
@@ -881,19 +1002,37 @@
 
                 <div class="col">
                     <p>
-                        <span class="text-primary">
+                        <span class="text-primary d-flex"
+                              lang="en">
                             B.S. in Computer Science
+                        </span>
+
+                        <span class="text-primary d-none"
+                              lang="es">
+                            Licenciado en Ciencias de la Computación
                         </span>
 
                         <br>
 
-                        <span class="text-muted">
+                        <span class="text-muted d-block"
+                              lang="en">
 
                             Experimental Faculty of Sciences and Technology | University of Carabobo (Oct. 2011 - Nov. 2021)
 
                             <br>
 
                             The Bachelor of Computer Science deals with posing and solving problems that require the use of the computer with a scientific orientation. He masters the techniques of the use of computers, calculation programming, non-numerical problem programming, internal machine administration methods, simulation methods, information processing. Solves problems of use of computer systems in the field of exact sciences, natural sciences and human sciences.
+
+                        </span>
+
+                        <span class="text-muted d-none"
+                              lang="es">
+
+                            Facultad de Ciencia y Tecnología | Universidad de Carabobo (Oct. 2011 - Nov. 2021)
+
+                            <br>
+
+                            El Licenciado en Computación se ocupa de plantear y de resolver problemas que requieren la utilización del computador con una orientación científica. Domina las técnicas del uso de las computadoras, programación de cálculos, programación de problemas no numéricos, métodos de administración interna de la máquina, métodos de simulación, tratamientos de información. Resuelve problemas de utilización de los sistemas de computación en el campo de las ciencias exactas, ciencias naturales y ciencias humanas.
 
                         </span>
 
@@ -908,8 +1047,11 @@
         <div class=" bg-gray-section d-flex justify-content-center flex-column align-items-center p-5">
 
 
-            <h4 class="text-dark d-block"
+            <h4 class="text-dark d-block justify-content-center align-items-center text-center"
                 lang="en">Courses and Certifications</h4>
+
+            <h4 class="text-dark d-none justify-content-center align-items-center text-center"
+                lang="es">Cursos y Certificados</h4>
 
             <!-- Slider main container -->
             <div class="swiper card mat-elevation-z2 p-2">
@@ -1007,11 +1149,15 @@
         </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio"
+             class="d-none d-sm-block">
         <div class="d-flex justify-content-center flex-column align-items-center mt-5">
 
             <h1 class="text-dark d-block"
                 lang="en">Portfolio</h1>
+
+            <h1 class="text-dark d-none"
+                lang="es">Portafolio</h1>
 
             <div class="row w-100">
 
@@ -1042,6 +1188,11 @@
                         <span class="text-wrapper">
                             <span class="letters "
                                   lang="en"> More apps are being deployed... 🔥
+
+                            </span>
+
+                            <span class="letters d-none"
+                                  lang="es"> Mas aplicaciones estan siendo desplegadas... 🔥
 
                             </span>
 

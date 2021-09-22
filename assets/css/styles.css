@@ -385,10 +385,29 @@ body.loaded #preloader{
   }
 }
 
+
+.icon{
+  height: 24px;
+  width: 24px;
+}
+
+
+@media screen and (min-width: 399px) {
+  
+  .ml14 {
+    font-weight: 200;
+    font-size: 3.2em;
+    color: white;
+  }
+  }
+
+@media screen and (max-width: 399px) {
+  
 .ml14 {
   font-weight: 200;
-  font-size: 3.2em;
+  font-size: 2.2em;
   color: white;
+}
 }
 
 .ml10 {

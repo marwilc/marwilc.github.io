@@ -96,6 +96,8 @@ anime.timeline({loop: true})
   });
   
       
+  // console.log(document.querySelectorAll('[lang="en"]'));
+  // console.log(document.querySelectorAll('[lang="es"]'));
   
       
       
@@ -104,5 +106,40 @@ anime.timeline({loop: true})
       }, 1000);
 
  
- })();
+})();
+ 
+
+function setLang(lang) {
+  
+  if (lang == 'en') {
+    
+    hide('[lang="en"]');
+    show('[lang="es"]');    
+
+  } else {
+    
+    hide('[lang="es"]');
+    show('[lang="en"]');
+  }
+  
+}
+
+function show(lang) {
+  document.querySelectorAll(lang).forEach(element => {
+    
+    element.classList.remove('d-none');
+    element.classList.add('d-flex');
+  });
+}
+
+
+function hide(lang) {  
+  document.querySelectorAll(lang).forEach(element => {
+    
+    element.classList.remove('d-flex');
+    element.classList.add('d-none');
+
+  });
+  
+}
 
