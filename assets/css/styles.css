@@ -15,6 +15,11 @@
  height: 60px;
 }
 
+
+.w-1000px{
+  max-width: 1000px;
+}
+
 .top-header-content{
     padding: 16px;
     display: flex;
@@ -390,6 +395,59 @@ body.loaded #preloader{
   height: 24px;
   width: 24px;
 }
+
+
+@media screen and (min-width: 1000px) {
+  
+  .skills-section > div {
+    max-width: 1000px;
+    width: 1000px;
+  }
+  
+  
+  #about > div {
+    max-width: 1000px;
+    width: 1000px;
+  }
+  
+  #education > div {
+    max-width: 1000px;
+    width: 1000px;
+  }
+  
+  #certification > div {
+    max-width: 1000px;
+    width: 1000px;
+  }
+  
+  
+  
+  }
+  
+  @media screen and (max-width: 1000px) {
+  
+    .skills-section > div {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    
+    #about > div {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    #education > div {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    #certification > div {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    }
 
 
 @media screen and (min-width: 399px) {
