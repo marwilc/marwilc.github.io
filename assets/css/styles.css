@@ -496,3 +496,8 @@ body.loaded #preloader{
   display: inline-block;
   line-height: 1em;
 }
+
+.image-app{
+  width: 100%;
+  object-fit: contain;
+}
